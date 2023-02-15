@@ -9,7 +9,7 @@ from stages import hangman
 
 import os
 
-from pprint import pprint # to be removed later
+from pprint import pprint #############
 
 
 
@@ -65,13 +65,14 @@ def start_menu():
     else:
         print(f"You entered: {start_input}. Please enter 1 or 2 or 3.")
         start_input = input("Enter your option here:\n")
-        start_game()
+        clear()
+        start_menu()
 
 
 
 def create_user():
     """
-    Takes the player name and (in progress)
+    Takes the player name
     """
     clear()
     print("Your gallows is building up...\n")
@@ -79,7 +80,7 @@ def create_user():
     print("You will enjoy it!\n")
     sleep(2)
     print("In the meantime...")
-    user_name_input = input("Enter your name for your gravestone:\n")
+    user_name_input = input("Enter your name:\n")
 
 
 def rules():
@@ -89,7 +90,7 @@ def rules():
     clear()
     print(Fore.YELLOW + "Game Rules:\n")
 
-    print(Fore.RESET_ALL +
+    print(Style.RESET_ALL +
         "A. You will be guessing the secret word by entering single letter at a time.\n"+
         "B. After each incorrectly answered letter your Hangman will start to build.\n"+
         "C. You have 7 lifes. When you loose all, You will be hang!\n"+
@@ -113,13 +114,14 @@ def rules():
 
 def quit():
     """
-    Goodbye user and end program
+    Goodbye user and end program and start game again
     """
     clear()
     print("You chose to live longer. Make sure that you enjoy it!\n")
     print("GoodBye!\n")
     sleep(5)
     clear()
+    welcome()
 
 
 
