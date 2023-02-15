@@ -63,9 +63,12 @@ def start_menu():
         quit()
 
     else:
-        print(f"You entered: {start_input}. Please enter 1 or 2 or 3.")
-        start_input = input("Enter your option here:\n")
         clear()
+        print(f"You entered: {start_input}. Please enter 1 or 2 or 3.\n")
+        sleep(2)
+        # start_input = input("Enter your option here:\n")
+        # clear()
+        # start_game()
         start_menu()
 
 
@@ -88,15 +91,16 @@ def rules():
     Shows instructions / rules of the game
     """
     clear()
-    print(Fore.YELLOW + "Game Rules:\n")
+    print(Fore.YELLOW + "*" * 70)
+    print(Fore.YELLOW + "Game Golden Rules:\n")
 
     print(Style.RESET_ALL +
         "A. You will be guessing the secret word by entering single letter at a time.\n"+
         "B. After each incorrectly answered letter your Hangman will start to build.\n"+
         "C. You have 7 lifes. When you loose all, You will be hang!\n"+
         "D. If you love dying. You can start the game again!\n")
-    print("*" * 70)
-    print("Choose one of the options to continue:")
+    print(Fore.YELLOW + "*" * 70)
+    print(Style.RESET_ALL + "Choose one of the options to continue:")
     print("1. Play the Game")
     print("3. Quit")
     print("*" * 70)
@@ -107,8 +111,12 @@ def rules():
     elif continue_input == "3":
         quit()
     else:
-        print(f"You entered: {start_input}. Please enter 1 or 3.")
-        continue_input = input("Enter your option here:\n")
+        # clear()
+        print(f"You entered: {continue_input}. Please enter 1 or 3.")
+        sleep(2)
+        # continue_input = input("Enter your option here:\n")
+        # clear()
+        rules()
 
 
 
@@ -117,8 +125,10 @@ def quit():
     Goodbye user and end program and start game again
     """
     clear()
+    print("*" * 70)
     print("You chose to live longer. Make sure that you enjoy it!\n")
-    print("GoodBye!\n")
+    print("GoodBye and Good luck!\n")
+    print("*" * 70)
     sleep(5)
     clear()
     welcome()
