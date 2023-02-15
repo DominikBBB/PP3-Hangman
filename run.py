@@ -72,18 +72,39 @@ def start_menu():
         start_menu()
 
 
-
 def create_user():
     """
     Takes the player name
     """
     clear()
     print("Your gallows is building up...\n")
-    sleep(2)
+    sleep(1)
     print("You will enjoy it!\n")
-    sleep(2)
+    sleep(1)
     print("In the meantime...")
-    user_name_input = input("Enter your name:\n")
+    while True:
+        user_name = input("Tell me your name (use letters only):\n")
+        print("")
+        if not user_name.isalpha():
+            print("Please enter letters only!\n")
+            continue
+        else:
+            print(Fore.RED + f"Hello {user_name}! Welcome to the game and Good luck!\n")
+            sleep(1)
+            break
+    start_game()
+
+
+
+def start_game():
+    """
+    Start the game
+    """
+    
+
+
+
+
 
 
 def rules():
@@ -119,7 +140,6 @@ def rules():
         rules()
 
 
-
 def quit():
     """
     Goodbye user and end program and start game again
@@ -132,6 +152,9 @@ def quit():
     sleep(5)
     clear()
     welcome()
+
+
+
 
 
 
