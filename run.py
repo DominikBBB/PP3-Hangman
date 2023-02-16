@@ -28,7 +28,6 @@ def welcome():
     print(Fore.YELLOW + "Welcome to the Hangman Game!\n")
     print(Fore.RED + "Do you know how you want to hang today?\n")
     print(Style.RESET_ALL + "*" * 70)
-    # print(Fore.RED + (hangman[-1])+(hangman[-1])+(hangman[-1]))
     print(Fore.RED + "  +---+"+"  +---+"+"  +---+")
     print(Fore.RED + "  |   |"+"  |   |"+"  |   |")
     print(Fore.RED + "  O   |"+"  O   |"+"  O   |")
@@ -38,7 +37,6 @@ def welcome():
     print(Fore.GREEN + "========="+"========="+"=========")
     print(Style.RESET_ALL + "*" * 70)
     sleep(2)
-    # clear()
     start_menu()
 
 
@@ -102,46 +100,57 @@ def create_user():
 #     (This function can be extended to allow user type their own word)
 #     """
 #     global secret_word
-#     secret_word = random.choice(words)
+#     secret_word = random.choice(words).upper()
 
-#     return secret_word.upper()
+#     return
 
 
 
 def game():
     """
     Start the game
-    # """
-    # secret_word = list(get_secret_word())
-    # display = "_" * len(secret_word)
-    # print(display)
-
+    Code based on YT: https://youtu.be/lJ7RhvNvsnc
+    """
     number_mistakes = 0
     letters_quessed = []
     number_mistakes_allowed = len(hangman)
-    secret_word = random.choice(words)
+    secret_word = random.choice(words).upper()
+    # secret_word = get_secret_word()
     letters_word = list(secret_word)
     wrong_letters = []
     
-    print()
-    print("The word has {} letters".format(len(letters_word)))
+    print("*" * 70)
+    print(Fore.YELLOW + "The word has {} letters".format(len(letters_word)))
 
     while number_mistakes < number_mistakes_allowed:
         print()
-        print("Wrong letters: ", end="")
+        print(Fore.RED + "Wrong letters: ", end="")
         for letter in wrong_letters:
             print("{}, ".format(letter), end="")
         print()
-        print("Guesses left: {}".format(number_mistakes_allowed - number_mistakes))
-        letter_user = input("Enter your letter: ")
-
-                    # isalpha
-
+        print(Style.RESET_ALL + "Guesses left: {}".format(number_mistakes_allowed - number_mistakes))
+        
+        while True:
+            letter_user = input("Enter your letter: \n").upper()
+            print()
+            if not letter_user.isalpha():
+                print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
+                continue
+            else:
+                break
 
         while letter_user in letters_quessed or letter_user in wrong_letters:
             print()
             print("You have already entered this letter. Please choose another one!")
-            letter_user = input("Enter your new letter: ")
+            while True:
+                letter_user = input("Enter your new letter: \n").upper()
+                print()
+                if not letter_user.isalpha():
+                    print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
+                    continue
+                else:
+                    break
+
 
         if letter_user not in letters_word:
             number_mistakes += 1
@@ -162,9 +171,9 @@ def game():
 
         print()
         if number_mistakes:
-            print(hangman[number_mistakes - 1])
+            print(Fore.RED + hangman[number_mistakes - 1])
         print()
-        print("----------------------------")
+        print(Style.RESET_ALL + "*" * 70)
 
         if len(letters_quessed) == len(letters_word):
             print()
