@@ -92,15 +92,100 @@ def create_user():
             print(Fore.RED + f"Hello {user_name}! Welcome to the game and Good luck!\n")
             sleep(1)
             break
-    start_game()
+            clear()
+    game()
+
+
+# def get_secret_word():
+#     """
+#     Get the new secret word
+#     (This function can be extended to allow user type their own word)
+#     """
+#     global secret_word
+#     secret_word = random.choice(words)
+
+#     return secret_word.upper()
 
 
 
-def start_game():
+def game():
     """
     Start the game
-    """
+    # """
+    # secret_word = list(get_secret_word())
+    # display = "_" * len(secret_word)
+    # print(display)
+
+    number_mistakes = 0
+    letters_quessed = []
+    number_mistakes_allowed = len(hangman)
+    secret_word = random.choice(words)
+    letters_word = list(secret_word)
+    wrong_letters = []
     
+    print()
+    print("The word has {} letters".format(len(letters_word)))
+
+    while number_mistakes < number_mistakes_allowed:
+        print()
+        print("Wrong letters: ", end="")
+        for letter in wrong_letters:
+            print("{}, ".format(letter), end="")
+        print()
+        print("Guesses left: {}".format(number_mistakes_allowed - number_mistakes))
+        letter_user = input("Enter your letter: ")
+
+                    # isalpha
+
+
+        while letter_user in letters_quessed or letter_user in wrong_letters:
+            print()
+            print("You have already entered this letter. Please choose another one!")
+            letter_user = input("Enter your new letter: ")
+
+        if letter_user not in letters_word:
+            number_mistakes += 1
+            wrong_letters.append(letter_user)
+
+        print()
+        print("Word: ", end="")
+
+        for letter in letters_word:
+            if letter_user == letter:
+                letters_quessed.append(letter_user)
+
+        for letter in letters_word:
+            if letter in letters_quessed:
+                print(letter + " ", end="")
+            else:
+                print("_ ", end="")
+
+        print()
+        if number_mistakes:
+            print(hangman[number_mistakes - 1])
+        print()
+        print("----------------------------")
+
+        if len(letters_quessed) == len(letters_word):
+            print()
+            print("You won!!!!")
+            break
+
+    if number_mistakes == number_mistakes_allowed:
+        print()
+        print("You lost!")
+
+
+
+
+
+
+
+    
+game()
+
+
+
 
 
 
@@ -155,7 +240,4 @@ def quit():
 
 
 
-
-
-
-welcome()
+# welcome()
