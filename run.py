@@ -24,6 +24,7 @@ def welcome():
     """
     Welcome message
     """
+    clear()
     print("*" * 70)
     print(Fore.YELLOW + "Welcome to the Hangman Game!\n")
     print(Fore.RED + "Do you know how you want to hang today?\n")
@@ -47,30 +48,24 @@ def start_menu():
     print("Choose one of the options to continue:")
     print("1. Play the Game")
     print("2. Read Instructions/Rules")
-    print("3. Quit")
-    print("*" * 70)
+    print("3. Quit\n")
+    # print("*" * 70)
     start_input = input("Enter your option here:\n")
 
     if start_input == "1":
-        create_user()
-
+        user_name()
     elif start_input == "2":
         rules()
-        
     elif start_input == "3":
         quit()
-
     else:
         clear()
         print(f"You entered: {start_input}. Please enter 1 or 2 or 3.\n")
         sleep(2)
-        # start_input = input("Enter your option here:\n")
-        # clear()
-        # start_game()
         start_menu()
 
 
-def create_user():
+def user_name():
     """
     Takes the player name
     """
@@ -79,31 +74,20 @@ def create_user():
     sleep(1)
     print("You will enjoy it!\n")
     sleep(1)
-    print("In the meantime...")
+    print("In the meantime...\n")
     while True:
         user_name = input("Tell me your name (use letters only):\n")
-        print("")
+        print()
         if not user_name.isalpha():
             print("Please enter letters only!\n")
             continue
         else:
+            clear()
             print(Fore.RED + f"Hello {user_name}! Welcome to the game and Good luck!\n")
             sleep(1)
             break
             clear()
     game()
-
-
-# def get_secret_word():
-#     """
-#     Get the new secret word
-#     (This function can be extended to allow user type their own word)
-#     """
-#     global secret_word
-#     secret_word = random.choice(words).upper()
-
-#     return
-
 
 
 def game():
@@ -115,11 +99,10 @@ def game():
     letters_quessed = []
     number_mistakes_allowed = len(hangman)
     secret_word = random.choice(words).upper()
-    # secret_word = get_secret_word()
     letters_word = list(secret_word)
     wrong_letters = []
     
-    print("*" * 70)
+    print(Style.RESET_ALL + "*" * 70)
     print(Fore.YELLOW + "The word has {} letters".format(len(letters_word)))
 
     while number_mistakes < number_mistakes_allowed:
@@ -141,7 +124,7 @@ def game():
 
         while letter_user in letters_quessed or letter_user in wrong_letters:
             print()
-            print("You have already entered this letter. Please choose another one!")
+            print("You have already entered this letter. Please choose another one!\n")
             while True:
                 letter_user = input("Enter your new letter: \n").upper()
                 print()
@@ -151,11 +134,9 @@ def game():
                 else:
                     break
 
-
         if letter_user not in letters_word:
             number_mistakes += 1
             wrong_letters.append(letter_user)
-
         print()
         print("Word: ", end="")
 
@@ -177,28 +158,43 @@ def game():
 
         if len(letters_quessed) == len(letters_word):
             print()
-            print("You won!!!!")
-            break
+            print(Fore.RED + f"Excellent! You are the winner!\n")
+            sleep(3)
+            print(Style.RESET_ALL + "Wanna be hanged again?\n")
+            sleep(1)
+            play_again()
 
     if number_mistakes == number_mistakes_allowed:
         print()
-        print("You lost!")
+        print(Fore.RED + f"Poor You! You are dead!\n")
+        sleep(3)
+        print()
+        print(Style.RESET_ALL + "Wanna be hanged again?\n")
+        sleep(1)
+        play_again()
 
 
+def play_again():
+    """
+    Ask the player if their want to play again or quit
+    """
+    print(Style.RESET_ALL + "*" * 70)
+    print("Choose one of the options:")
+    print("1. Play the Game again")
+    print("3. Quit\n")
+    # print("*" * 70)
+    again_input = input("Enter your option here:\n")
 
-
-
-
-
-    
-game()
-
-
-
-
-
-
-
+    if again_input == "1":
+        welcome()
+    elif again_input == "3":
+        quit()
+    else:
+        # clear()
+        print(f"You entered: {again_input}. Please enter 1 or 3.\n")
+        sleep(1)
+        clear()
+        play_again()
 
 
 def rules():
@@ -241,12 +237,25 @@ def quit():
     clear()
     print("*" * 70)
     print("You chose to live longer. Make sure that you enjoy it!\n")
-    print("GoodBye and Good luck!\n")
-    print("*" * 70)
+    print(Fore.RED + "GoodBye and Good luck!\n")
+    print(Style.RESET_ALL + "*" * 70)
     sleep(5)
     clear()
     welcome()
 
 
+def main():
+    """
+    Run all program functions
+    """
+    clear()
+    welcome()
+    start_menu()
+    user_name()
+    game()
+    play_again()
+    rules()
+    quit()
+    
 
-# welcome()
+main()
