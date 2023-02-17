@@ -49,7 +49,6 @@ def start_menu():
     print("1. Play the Game")
     print("2. Read Instructions/Rules")
     print("3. Quit\n")
-    # print("*" * 70)
     start_input = input("Enter your option here:\n")
 
     if start_input == "1":
@@ -79,7 +78,7 @@ def user_name():
         user_name = input("Tell me your name (use letters only):\n")
         print()
         if not user_name.isalpha():
-            print("Please enter letters only!\n")
+            print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
             continue
         else:
             clear()
@@ -158,15 +157,15 @@ def game():
 
         if len(letters_quessed) == len(letters_word):
             print()
-            print(Fore.RED + f"Excellent! You are the winner!\n")
+            print(Fore.RED + f"Excellent! You guessed the word: {secret_word}!\n")
             sleep(3)
-            print(Style.RESET_ALL + "Wanna be hanged again?\n")
+            print(Style.RESET_ALL + "Wanna try to be hanged again?\n")
             sleep(1)
             play_again()
 
     if number_mistakes == number_mistakes_allowed:
         print()
-        print(Fore.RED + f"Poor You! You are dead!\n")
+        print(Fore.RED + f"Poor You! You are dead! The word was: {secret_word}\n")
         sleep(3)
         print()
         print(Style.RESET_ALL + "Wanna be hanged again?\n")
@@ -182,7 +181,6 @@ def play_again():
     print("Choose one of the options:")
     print("1. Play the Game again")
     print("3. Quit\n")
-    # print("*" * 70)
     again_input = input("Enter your option here:\n")
 
     if again_input == "1":
@@ -190,9 +188,8 @@ def play_again():
     elif again_input == "3":
         quit()
     else:
-        # clear()
         print(f"You entered: {again_input}. Please enter 1 or 3.\n")
-        sleep(1)
+        sleep(2)
         clear()
         play_again()
 
@@ -222,11 +219,8 @@ def rules():
     elif continue_input == "3":
         quit()
     else:
-        # clear()
         print(f"You entered: {continue_input}. Please enter 1 or 3.")
         sleep(2)
-        # continue_input = input("Enter your option here:\n")
-        # clear()
         rules()
 
 
