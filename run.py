@@ -75,7 +75,7 @@ def user_name():
     sleep(1)
     print("In the meantime...\n")
     while True:
-        user_name = input("Tell me your name (use letters only):\n")
+        user_name = input("Tell me your name (use letters only):\n").upper()
         print()
         if not user_name.isalpha():
             print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
