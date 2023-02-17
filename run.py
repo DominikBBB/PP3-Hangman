@@ -9,7 +9,7 @@ from stages import hangman
 
 import os
 
-from pprint import pprint #############
+# from pprint import pprint #############
 
 
 
@@ -91,7 +91,7 @@ def user_name():
 
 def game():
     """
-    Start the game
+    Start the game function
     Code based on YT: https://youtu.be/lJ7RhvNvsnc
     """
     number_mistakes = 0
@@ -219,7 +219,7 @@ def rules():
     elif continue_input == "3":
         quit()
     else:
-        print(f"You entered: {continue_input}. Please enter 1 or 3.")
+        print(f"You entered: {continue_input}. Please enter 1 or 3.\n")
         sleep(2)
         rules()
 
