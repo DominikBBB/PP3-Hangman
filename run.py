@@ -215,7 +215,7 @@ def rules():
     continue_input = input("Enter your option here:\n")
 
     if continue_input == "1":
-        create_user()
+        user_name()
     elif continue_input == "3":
         quit()
     else:
