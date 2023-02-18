@@ -115,7 +115,7 @@ def game():
         while True:
             letter_user = input("Enter your letter: \n").upper()
             print()
-            if not letter_user.isalpha() or len(letter_user) == 1:
+            if not letter_user.isalpha() or not len(letter_user) == 1:
                 print("Please enter"+Fore.YELLOW
                       + " single letter "+Style.RESET_ALL+"only!\n")
                 continue
@@ -129,7 +129,7 @@ def game():
             while True:
                 letter_user = input("Enter your new letter: \n").upper()
                 print()
-                if not letter_user.isalpha() or len(letter_user) == 1:
+                if not letter_user.isalpha() or not len(letter_user) == 1:
                     print("Please enter"+Fore.YELLOW
                           + " single letter "+Style.RESET_ALL+"only!\n")
                     continue
