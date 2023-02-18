@@ -160,8 +160,8 @@ def game():
 
         if len(letters_guessed) == len(letters_word):
             print()
-            print(Fore.RED + f"Excellent! "
-                  + "You guessed the word: {secret_word}!\n")
+            print(Fore.RED + "Excellent! "
+                  + f"You guessed the word: {secret_word}!\n")
             sleep(3)
             print(Style.RESET_ALL + "Wanna try to be hanged again?\n")
             sleep(1)
@@ -169,8 +169,8 @@ def game():
 
     if number_mistakes == number_mistakes_allowed:
         print()
-        print(Fore.RED + f"Poor You! You are dead! "
-              + "The word was: {secret_word}\n")
+        print(Fore.RED + "Poor You! You are dead! "
+              + f"The word was: {secret_word}\n")
         sleep(3)
         print()
         print(Style.RESET_ALL + "Wanna be hanged again?\n")
