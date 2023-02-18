@@ -82,7 +82,7 @@ def user_name():
         else:
             clear()
             print("*" * 80)
-            print(Fore.RED+f"Hello {user_name}!
+            print(Fore.RED + f"Hello {user_name}!
                   + Welcome to the game and Good luck!\n")
             sleep(1)
             break
@@ -160,7 +160,7 @@ def game():
 
         if len(letters_guessed) == len(letters_word):
             print()
-            print(Fore.RED+f"Excellent!"
+            print(Fore.RED + f"Excellent!"
                   + "You guessed the word: {secret_word}!\n")
             sleep(3)
             print(Style.RESET_ALL + "Wanna try to be hanged again?\n")
@@ -169,7 +169,7 @@ def game():
 
     if number_mistakes == number_mistakes_allowed:
         print()
-        print(Fore.RED+f"Poor You! You are dead!"
+        print(Fore.RED + f"Poor You! You are dead!"
               + "The word was: {secret_word}\n")
         sleep(3)
         print()
