@@ -1,4 +1,7 @@
-hangman = [ '''
+"""
+Stages of Hangman in ASCII
+"""
+hangman = ['''
   +---+
   |   |
       |
