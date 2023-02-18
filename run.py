@@ -218,6 +218,7 @@ def rules():
     print(Style.RESET_ALL + "Choose one of the options to continue:")
     print("1. Play the Game")
     print("3. Exit")
+    print()
     continue_input = input("Enter your option here:\n")
 
     if continue_input == "1":
