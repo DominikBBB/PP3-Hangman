@@ -9,9 +9,10 @@ from stages import hangman
 
 import os
 
+
 def clear():
     """
-    Clear the terminal 
+    Clear the terminal
     """
     os.system("cls" if os.name == "nt" else "clear")
 
@@ -28,8 +29,8 @@ def welcome():
     print(Fore.RED + "  +---+"+"  +---+"+"  +---+")
     print(Fore.RED + "  |   |"+"  |   |"+"  |   |")
     print(Fore.RED + "  O   |"+"  O   |"+"  O   |")
-    print(Fore.RED + " /|\  |"+" /|\  |"+" /|\  |")
-    print(Fore.RED + " / \  |"+" / \  |"+" / \  |")
+    print(Fore.RED + " /|'\'  |"+" /|'\'  |"+" /|'\'  |")
+    print(Fore.RED + " / '\'  |"+" / '\'  |"+" / '\'  |")
     print(Fore.RED + "      |"+"      |"+"      |")
     print(Fore.GREEN + "========="+"========="+"=========")
     print(Style.RESET_ALL + "*" * 80)
@@ -39,7 +40,7 @@ def welcome():
 
 def start_menu():
     """
-    Start the game menu    
+    Start the game menu
     """
     print("Choose one of the options to continue:")
     print("1. Play the Game")
@@ -71,15 +72,18 @@ def user_name():
     sleep(1)
     print("In the meantime...\n")
     while True:
-        user_name = input("Tell me your name (use letters only):\n").capitalize()
+        user_name = input("Tell me your name \
+                         (use letters only):\n").capitalize()
         print()
         if not user_name.isalpha():
-            print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
+            print("Please enter"+Fore.YELLOW
+                  + " letters "+Style.RESET_ALL+"only!\n")
             continue
         else:
             clear()
             print("*" * 80)
-            print(Fore.RED + f"Hello {user_name}! Welcome to the game and Good luck!\n")
+            print(Fore.RED+f"Hello {user_name}! \
+                  Welcome to the game and Good luck!\n")
             sleep(1)
             break
     game()
@@ -96,7 +100,7 @@ def game():
     secret_word = random.choice(words).upper()
     letters_word = list(secret_word)
     wrong_letters = []
-    
+
     print(Style.RESET_ALL + "*" * 80)
     print(Fore.YELLOW + "The word has {} letters".format(len(letters_word)))
 
@@ -106,25 +110,28 @@ def game():
         for letter in wrong_letters:
             print("{}, ".format(letter), end="")
         print()
-        print(Style.RESET_ALL + "Guesses left: {}".format(number_mistakes_allowed - number_mistakes))
-        
+        print(Style.RESET_ALL+"Guesses left: {}".format(
+              number_mistakes_allowed - number_mistakes))
         while True:
             letter_user = input("Enter your letter: \n").upper()
             print()
             if not letter_user.isalpha():
-                print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
+                print("Please enter"+Fore.YELLOW
+                      + " letters "+Style.RESET_ALL+"only!\n")
                 continue
             else:
                 break
 
         while letter_user in letters_guessed or letter_user in wrong_letters:
             print()
-            print("You have already entered this letter. Please choose another one!\n")
+            print("You have already entered this letter. \
+                  Please choose another one!\n")
             while True:
                 letter_user = input("Enter your new letter: \n").upper()
                 print()
                 if not letter_user.isalpha():
-                    print("Please enter" + Fore.YELLOW + " letters " + Style.RESET_ALL + "only!\n")
+                    print("Please enter"+Fore.YELLOW
+                          + " letters "+Style.RESET_ALL+"only!\n")
                     continue
                 else:
                     break
@@ -153,7 +160,8 @@ def game():
 
         if len(letters_guessed) == len(letters_word):
             print()
-            print(Fore.RED + f"Excellent! You guessed the word: {secret_word}!\n")
+            print(Fore.RED+f"Excellent! \
+                  You guessed the word: {secret_word}!\n")
             sleep(3)
             print(Style.RESET_ALL + "Wanna try to be hanged again?\n")
             sleep(1)
@@ -161,7 +169,8 @@ def game():
 
     if number_mistakes == number_mistakes_allowed:
         print()
-        print(Fore.RED + f"Poor You! You are dead! The word was: {secret_word}\n")
+        print(Fore.RED+f"Poor You! You are dead! \
+              The word was: {secret_word}\n")
         sleep(3)
         print()
         print(Style.RESET_ALL + "Wanna be hanged again?\n")
@@ -197,11 +206,14 @@ def rules():
     clear()
     print(Fore.YELLOW + "*" * 80)
     print(Fore.YELLOW + "Game Golden Rules:\n")
-    print(Style.RESET_ALL +
-        "A. You will be guessing the secret word by entering single letter at a time.\n"+
-        "B. After each incorrectly answered letter your Hangman will start to build.\n"+
-        "C. You have 7 lifes. When you loose all, You will be hang!\n"+
-        "D. If you love dying. You can start the game again!\n")
+    print(Style.RESET_ALL
+          + "A. You will be guessing the secret word \
+          by entering single letter at a time.\n"
+          + "B. After each incorrectly answered letter \
+          your Hangman will start to build.\n"
+          + "C. You have 7 lifes. When you loose all, \
+          You will be hang!\n"
+          + "D. If you love dying. You can start the game again!\n")
     print(Fore.YELLOW + "*" * 80)
     print(Style.RESET_ALL + "Choose one of the options to continue:")
     print("1. Play the Game")
@@ -245,6 +257,6 @@ def main():
     play_again()
     rules()
     exit()
-    
+
 
 main()
