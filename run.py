@@ -82,8 +82,8 @@ def user_name():
         else:
             clear()
             print("*" * 80)
-            print(Fore.RED + f"Hello {user_name}!
-                  + Welcome to the game and Good luck!\n")
+            print(Fore.RED + f"Hello {user_name}!"
+                  + "Welcome to the game and Good luck!\n")
             sleep(1)
             break
     game()
