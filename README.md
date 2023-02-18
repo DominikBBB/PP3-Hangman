@@ -1,31 +1,20 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![mockup of homepage](assets/pictures/AmIResponsive-03.png)
 
-Welcome DominikBBB,
+# Saxon-Palace-Quiz
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## by DB
 
-## Reminders
+---
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+![logo](assets/testing/manual/MT-01.png)
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+---
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+This is my Portfolio Project 3 (PP3) which is a part of the Code Institute’s Full Stack Software Development Diploma Course. This project demonstrates the skills and knowledge of the Python Programming Language which I have learned during the course.
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+#### [Click here to view the site.](https://pp3-hangman-db.herokuapp.com/)
+#### [Click here to view the repository.](https://github.com/DominikBBB/PP3-Hangman)
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
+---
