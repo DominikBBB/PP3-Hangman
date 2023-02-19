@@ -341,7 +341,7 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
    [CI-Python-Linter](https://pep8ci.herokuapp.com/) was used to check the code for errors. Code passed validation in all files. Only warning 'W605 invalid escape sequence "\" ' showed up related to the hangman ascii art code which doesn't effect working code. Attempts to resolve the warning ended unsucesful.
 
-   [Validation](assets/testing/pep8/VALIDATION.md)
+   [Validation file](assets/testing/pep8/VALIDATION.md)
    
 
    
@@ -350,7 +350,7 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
    The functional final test was carried out using a flowchart. All works as expected. No bugs found.
 
-   [Functional testing](assets/testing/manual/FUNCIONAL.md)
+   [Functional testing file](assets/testing/manual/FUNCIONAL.md)
 
 
 ## User Stories Testing:
@@ -399,12 +399,9 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
 ## Bugs and Fixes
 
+A few bugs showed up during the CI Python Linter validation process. They are mostly all fixed, and all pages passed validation processes. Only warning 'W605 invalid escape sequence "\" ' related to the hangman ascii art code will stay remining as all attempts to resolve the warning ended unsuccessful. Full list of bugs and validation results before and after they were fixed:
 
-
-
-
-
-
+[Bugs and Fixes file](assets/testing/pep8/B&F.md)
 
 
 [Back to Table Of Contents](#table-of-contents)
@@ -484,11 +481,11 @@ To make a local clone of the project follow these steps:
 
 # Credits:
 
-- [Code Institute Course Content](https://learn.codeinstitute.net/dashboard) - Lines of code from walkthrough projects,
+- [Code Institute Course Content](https://learn.codeinstitute.net/dashboard) - lines of code from walkthrough projects,
 - [GitHub Community](https://github.com/) - suggestions for lines of code, project's file structure, and descriptions in readme,
 - [Stack Overflow](https://stackoverflow.com/) - suggestions for lines of code,
-- [Fabio Musanni's YT Channel](https://www.youtube.com/@FabioMusanni),
-- [Code Institute SLACK Community](https://slack.com/) - Source of assistance,
+- [Fabio Musanni's YT Channel](https://www.youtube.com/@FabioMusanni) - source of knowledge,
+- [Code Institute SLACK Community](https://slack.com/) - source of assistance,
 
   
 [Back to Table Of Contents](#table-of-contents)
