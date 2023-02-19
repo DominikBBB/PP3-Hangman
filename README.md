@@ -31,12 +31,13 @@ The project purpose is to build a command-line python application that allows us
     - [Surface](#surface)
         - [Typography](#typography)
 3. [Features](#features)
-    1. [Existing Features](#existing-features)
-    2. [Future Features](#future-features)
+    - [Existing Features](#existing-features)
+    - [Future Features](#future-features)
 4. [Technologies](#technologies)
-    1. [Languages](#languages)
-    2. [Other Technologies](#other-technologies)
-    3. [Resources](#Resources)
+    - [Main Languages](#main-languages)
+    - [Python Libraries](#python-libraries)
+    - [Other Technologies](#other-technologies)
+    - [Resources](#Resources)
 5. [Testing](#testing)
     1. [Tests](#tests)
         1. Functionality testing
@@ -254,6 +255,50 @@ Topography in the terminal is very limited. To make the terminal messages more i
 - to be able to enter own word.
 
 
+[Back to Table Of Contents](#table-of-contents)
+
+
+---
+
+
+# Technologies:
+
+## Main Languages:
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language)) - is a high-level, general-purpose programming language,
+- [Markdown](https://en.wikipedia.org/wiki/Markdown) - markup language used to write README and TESTING documents.
+
+## Python Libraries:
+
+- [random](https://docs.python.org/3/library/random.html) - built-in python module - used to generate random quote and random book on exit screen,
+- [textwrap](https://docs.python.org/3/library/textwrap.html) - built-in python module - used to wrap lines over 79 char to next line e.g. long book description,
+- [os](https://docs.python.org/3/library/os.html) - built-in pythod module - used to write clear_terminal function,
+- [colorama](https://pypi.org/project/colorama/) - used to color terminal outputs,
+- [time&sleep](https://docs.python.org/3/library/time.html) - used to displayed delayed messages in the terminal.
+
+## Other Technologies:
+
+- [Gitpod](https://gitpod.io/) - used to write the project code,
+- [Visual Studio Code](https://code.visualstudio.com/) - used to write the project code,
+- [Git]() - used for code version control after git-push command to GitHub,
+- [GitHub](https://github.com/) - used to store the project's code,
+- [Responsive Design](http://ami.responsivedesign.is/) - used to do responsive mockups,
+- [LucidChart](https://www.lucidchart.com/) - used to create flow chart diagram,
+- [Heroku](https://id.heroku.com/) - online app used to deploy project,
+- [CI-Python-Linter](https://pep8ci.herokuapp.com/) - PEP8 Python Validator.
+
+## Resources:
+
+- [Code Institute Course Content](https://learn.codeinstitute.net/dashboard) - Main source of fundamental knowledge,
+- [Code Institute SLACK Community](https://slack.com/) - Source of assistance,
+- [Wikipedia](https://pl.wikipedia.org/) - Source of history information and images,
+- [Grammarly](https://app.grammarly.com/) - help with grammar and typo check,
+- [GitHub Community](https://github.com/) - Source of information, solutions and suggestions,
+- [Stack Overflow](https://stackoverflow.com/) - Source of knowledge,
+- [Flake8 Rules](https://www.flake8rules.com/) - The Big Ol' List of Rules - Python Code Style
+- [Python Enhancement Proposals](https://peps.python.org/) - Source of knowledge.
+
+  
 [Back to Table Of Contents](#table-of-contents)
 
 
