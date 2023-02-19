@@ -207,12 +207,12 @@ def rules():
     print(Fore.YELLOW + "*" * 80)
     print(Fore.YELLOW + "Game Golden Rules:\n")
     print(Style.RESET_ALL
-          + "A. You will be guessing the secret word "
-          + "by entering single letter at a time.\n"
+          + "A. You will be guessing the secret word (flower name) "
+          + "by entering single letter at a time."
           + "B. After each incorrectly answered letter "
-          + "your Hangman will start to build.\n"
+          + "your Hangman will start to build."
           + "C. You have 7 lifes. When you loose all, "
-          + "You will be hang!\n"
+          + "You will be hang!"
           + "D. If you love dying. You can start the game again!\n")
     print(Fore.YELLOW + "*" * 80)
     print(Style.RESET_ALL + "Choose one of the options to continue:")

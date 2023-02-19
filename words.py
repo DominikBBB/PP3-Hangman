@@ -1,7 +1,6 @@
 """
-Secret words
+Secret words. 4 letters flower names.
 """
-#words = ["cat", "dog", "pig"]
 
 words = ["arum", "dock", "flag", "geum", "iris", "lxia",
          "lily", "ling", "lote", "musk", "pink", "rose",
