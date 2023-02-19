@@ -41,7 +41,7 @@ The project purpose is to build a command-line python application that allows us
     - [Resources](#Resources)
 5. [Testing](#testing)
     - [Validation](#validation)
-    - [Funcionality testing](#funcionality-testing)
+    - [Functionality testing](#functionality-testing)
     - [User Stories testing](#user-stories-testing)
     - [Bugs and Fixes](#bugs-and-fixes)
 6. [Deployment](#deployment)
@@ -54,7 +54,7 @@ The project purpose is to build a command-line python application that allows us
 
 # Project Overview:
 
-The Hangman Game is a very popular world game. In this application, the user is asked to input their name, and then a random secret word is choosen from a list of words. The user has to guess the word by inputting letters one at a time. If the letter is in the word, it is revealed, but if it is not, the player is penalized with an additional body part in the gallows. If the user correctly guesses full word, the app will ask the player if they want to try to be hanged  again. If the player does not guess the word correctly within the allowed number of guesses, the app will reveal the answer and ask the player if they want to be hanged again. The user has 7 lifes. The application is very easy to navigate for anybody.
+The Hangman Game is a very popular world game. In this application, the user is asked to input their name, and then a random secret word is chosen from a list of words. The user has to guess the word by inputting letters one at a time. If the letter is in the word, it is revealed, but if it is not, the player is penalized with an additional body part in the gallows. If the user correctly guesses full word, the app will ask the player if they want to try to be hanged  again. If the player does not guess the word correctly within the allowed number of guesses, the app will reveal the answer and ask the player if they want to be hanged again. The user has 7 lives. The application is very easy to navigate for anybody.
 
 
 [Back to Table Of Contents](#table-of-contents)
@@ -80,7 +80,7 @@ The Hangman Game is a very popular world game. In this application, the user is 
     1. I would like the game to be easy to navigate,
     2. I would like to easily understand the rules,
     3. I would like to enter my name,
-    4. I would like to be warmed if I put incorrent character,
+    4. I would like to be warmed if I put incorrect character,
     5. I would like to track the game progress,
     6. I would like to have a chance to retake the game.
 
@@ -298,7 +298,7 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
 - [random](https://docs.python.org/3/library/random.html) - built-in python module - used to generate random quote and random book on exit screen,
 - [textwrap](https://docs.python.org/3/library/textwrap.html) - built-in python module - used to wrap lines over 79 char to next line e.g. long book description,
-- [os](https://docs.python.org/3/library/os.html) - built-in pythod module - used to write clear_terminal function,
+- [os](https://docs.python.org/3/library/os.html) - built-in python module - used to write clear_terminal function,
 - [colorama](https://pypi.org/project/colorama/) - used to color terminal outputs,
 - [time&sleep](https://docs.python.org/3/library/time.html) - used to displayed delayed messages in the terminal.
 
@@ -339,18 +339,23 @@ Topography in the terminal is very limited. To make the terminal messages more i
 ## Validation:
 
 
-   [CI-Python-Linter](https://pep8ci.herokuapp.com/) was used to check the code for errors. Code passed validation in all files. Only warning 'W605 invalid escape sequence "\" ' showed up related to the hangman ascii art code which doesn't effect working code. Attempts to resolve the warning ended unsucesful.
+   [CI-Python-Linter](https://pep8ci.herokuapp.com/) was used to check the code for errors. Code passed validation in all files. Only warning 'W605 invalid escape sequence "\" ' showed up related to the hangman ascii art code which doesn't affect working code. Attempts to resolve the warning ended unsuccessful.
 
    [Validation file](assets/testing/pep8/VALIDATION.md)
-   
 
    
-## Funcionality Testing:
+[Back to Table Of Contents](#table-of-contents)
+   
+   
+## Functionality Testing:
 
 
    The functional final test was carried out using a flowchart. All works as expected. No bugs found.
 
    [Functional testing file](assets/testing/manual/FUNCIONAL.md)
+
+
+[Back to Table Of Contents](#table-of-contents)
 
 
 ## User Stories Testing:
@@ -368,13 +373,13 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
         User puts their name after he decided to play the game. In the meantime, he is informed that his gallows is building up.
 
-   4. I would like to be warmed if I put incorrent character.
+   4. I would like to be warmed if I put incorrect character.
 
         There is an error messages and visual cues to indicate that there has been an error. the user is prompt to input correct data before continuing.
 
    5. I would like to track the game progress.
 
-        There is a meter of 'wrong letters', 'guesses left' and progress of the gallow.
+        There is a meter of 'wrong letters', 'guesses left' and progress of the gallows.
 
    6. I would like to have a chance to retake the game.
 
@@ -395,6 +400,9 @@ Topography in the terminal is very limited. To make the terminal messages more i
    10. I want user to be able to choose to play again or exit.
         
         The user is clearly asked at the end of the game if he wants to play again or exit program.
+
+
+[Back to Table Of Contents](#table-of-contents)
 
 
 ## Bugs and Fixes
