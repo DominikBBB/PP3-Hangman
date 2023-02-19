@@ -1,5 +1,5 @@
 """
-Stages of Hangman in ASCII
+Stages of Hangman in ASCII ART
 """
 hangman = ['''
   +---+

@@ -405,9 +405,9 @@ Topography in the terminal is very limited. To make the terminal messages more i
 [Back to Table Of Contents](#table-of-contents)
 
 
-## Bugs and Fixes
+## Bugs and Fixes:
 
-A few bugs showed up during the CI Python Linter validation process. They are mostly all fixed, and all pages passed validation processes. Only warning 'W605 invalid escape sequence "\" ' related to the hangman ascii art code will stay remining as all attempts to resolve the warning ended unsuccessful. Full list of bugs and validation results before and after they were fixed:
+A few bugs showed up during the CI Python Linter validation process. They are mostly all fixed, and all pages passed validation processes. Only warning 'W605 invalid escape sequence "\" ' related to the hangman ascii art code will stay remining as all attempts to resolve the warning ended unsuccessful. The warnings don't affect running code at any point. Full list of bugs and validation results before and after they were fixed:
 
 [Bugs and Fixes file](assets/testing/pep8/B&F.md)
 
@@ -424,16 +424,17 @@ A few bugs showed up during the CI Python Linter validation process. They are mo
 
 The project was deployed using Heroku by the following steps:
 
-1. Create or log in to your account at heroku.com
-2. Click 'New' -> 'Create new app'
-3. Type in the app name (current project name is 'pp3-hangman-db') -> select the region -> 'Create app'
-4. Navigate to 'Settings' tab
-5. Click 'Reveal Config Vars' -> Add key: 'PORT' and value: '8000'
-6. Then click 'Add buildpack' -> add 'python' -> add 'nodejs'
-7. Navigate to 'Deploy' tab
-8. Select 'GitHub' in the 'Deployment method' area
-9. Enter the GitHub repository name in the search bar -> 'Connect'
-10. Click 'Deploy Branch' and wait for it to be built
+1. write command to the terminal: 'pip3 freeze > requirements.txt' to install dependencies into requirements.txt file
+2. Create or log in to your account at heroku.com
+3. Click 'New' -> 'Create new app'
+4. Type in the app name (current project name is 'pp3-hangman-db') -> select the region -> 'Create app'
+5. Navigate to 'Settings' tab
+6. Click 'Reveal Config Vars' -> Add key: 'PORT' and value: '8000'
+7. Then click 'Add buildpack' -> add 'python' -> add 'nodejs'
+8. Navigate to 'Deploy' tab
+9. Select 'GitHub' in the 'Deployment method' area
+10. Enter the GitHub repository name in the search bar -> 'Connect'
+11. Click 'Deploy Branch' and wait for it to be built
 
 
 ## GitHub pages:
