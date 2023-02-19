@@ -1,7 +1,4 @@
 """
-Secret words. 4 letters flower names.
+Secret words. 3 letters animal name.
 """
-
-words = ["arum", "dock", "flag", "geum", "iris", "lxia",
-         "lily", "ling", "lote", "musk", "pink", "rose",
-         "tare"]
+words = ["cat", "dog", "pig", "ant", "cow"]

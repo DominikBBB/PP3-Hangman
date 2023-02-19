@@ -261,8 +261,8 @@ Topography in the terminal is very limited. To make the terminal messages more i
 
 ## Future Features:
 
-- to choose level of difficulty,
-- to be able to enter own word.
+- User will be able to choose level of difficulty,
+- User will be able to enter own word.
 
 
 [Back to Table Of Contents](#table-of-contents)

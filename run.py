@@ -102,7 +102,8 @@ def game():
     wrong_letters = []
 
     print(Style.RESET_ALL + "*" * 80)
-    print(Fore.YELLOW + "The word has {} letters".format(len(letters_word)))
+    print(Fore.YELLOW
+          + "The word (animal name) has {} letters".format(len(letters_word)))
 
     while number_mistakes < number_mistakes_allowed:
         print()
@@ -207,7 +208,7 @@ def rules():
     print(Fore.YELLOW + "*" * 80)
     print(Fore.YELLOW + "Game Golden Rules:\n")
     print(Style.RESET_ALL
-          + "A. You will be guessing the secret word (flower name) "
+          + "A. You will be guessing the secret word (animal name) "
           + "by entering single letter at a time."
           + "B. After each incorrectly answered letter "
           + "your Hangman will start to build."
