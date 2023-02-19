@@ -165,6 +165,7 @@ Topography in the terminal is very limited. To make the terminal messages more i
     - welcome message is displayed
     - gives user 3 options to select: start the game, read the rules or exit
     - user is prompt to choose only one of these 3 options
+    <p>&nbsp;</p>
 
     <details><summary>Main Menu Screenshot 1</summary>
 
@@ -176,10 +177,11 @@ Topography in the terminal is very limited. To make the terminal messages more i
     ![MM](assets/testing/manual/MT-02.png)
 
     </details>
-
+    <p>&nbsp;</p>
 
 2. Player Name:
     - player name input is displayed
+    <p>&nbsp;</p>
 
     <details><summary>Player Name Input Screenshot 1</summary>
 
@@ -191,20 +193,24 @@ Topography in the terminal is very limited. To make the terminal messages more i
     ![PNI](assets/testing/manual/MT-04.png)
 
     </details>
+    <p>&nbsp;</p>
 
 3. Instructions / Rules:
     - instructions on how to use the program are displayed
     - gives user 2 options to select: start the game or exit
     - user is prompt to choose only one of these 2 options
+    <p>&nbsp;</p>
 
     <details><summary>Instructions Screenshot</summary>
 
     ![I](assets/testing/manual/MT-10.png)
 
     </details>
+    <p>&nbsp;</p>
 
 4. Enter the letter:
     - ask user to enter the single letter
+    <p>&nbsp;</p>
 
     <details><summary>Enter The Letter Screenshot 1</summary>
 
@@ -221,11 +227,13 @@ Topography in the terminal is very limited. To make the terminal messages more i
     ![ETL](assets/testing/manual/MT-07.png)
 
     </details>
+    <p>&nbsp;</p>
 
 5. The end of the game and the game loop
     - message with the end result and secret word
     - ask user if they want to play again or exit
     - user is prompt to choose only one of these 2 options
+    <p>&nbsp;</p>
 
     <details><summary>End of the Game Screenshot 1</summary>
 
@@ -238,16 +246,18 @@ Topography in the terminal is very limited. To make the terminal messages more i
     ![GO](assets/testing/manual/MT-09.png)
 
     </details>
+    <p>&nbsp;</p>
 
 6. Exit Game
     - Good bye and good luck message
+    <p>&nbsp;</p>
 
     <details><summary>End of the Game Screenshot 2</summary>
 
     ![EG](assets/testing/manual/MT-11.png)
 
     </details>
-
+    <p>&nbsp;</p>
 
 ## Future Features:
 
