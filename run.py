@@ -164,6 +164,7 @@ def game():
             print(Fore.RED + "Excellent! "
                   + f"You guessed the word: {secret_word}!\n")
             sleep(3)
+            print()
             print(Style.RESET_ALL + "Wanna try to be hanged again?\n")
             sleep(1)
             play_again()
@@ -209,11 +210,11 @@ def rules():
     print(Fore.YELLOW + "Game Golden Rules:\n")
     print(Style.RESET_ALL
           + "A. You will be guessing the secret word (animal name) "
-          + "by entering single letter at a time."
+          + "by entering single letter at a time.\n"
           + "B. After each incorrectly answered letter "
-          + "your Hangman will start to build."
+          + "your Hangman will start to build.\n"
           + "C. You have 7 lifes. When you loose all, "
-          + "You will be hang!"
+          + "You will be hang!\n"
           + "D. If you love dying. You can start the game again!\n")
     print(Fore.YELLOW + "*" * 80)
     print(Style.RESET_ALL + "Choose one of the options to continue:")

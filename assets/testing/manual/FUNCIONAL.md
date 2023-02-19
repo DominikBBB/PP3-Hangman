@@ -78,3 +78,4 @@
 | Exit | Wait 5 secs | Navigate to Main screen | Works as expected |
 
 ![MT1](./MT-11.png)
+
