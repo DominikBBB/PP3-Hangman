@@ -25,7 +25,7 @@ def welcome():
     print("*" * 80)
     print(Fore.YELLOW + "Welcome to the Hangman Game!\n")
     print(Fore.RED + "Do you know how you want to hang today?\n")
-    print(Style.RESET_ALL + "*" * 80)
+    print()
     print(Fore.RED + "  +---+"+"  +---+"+"  +---+")
     print(Fore.RED + "  |   |"+"  |   |"+"  |   |")
     print(Fore.RED + "  O   |"+"  O   |"+"  O   |")

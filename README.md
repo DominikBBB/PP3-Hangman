@@ -295,12 +295,14 @@ Topography in the terminal is very limited. To make the terminal messages more i
 - [Responsive Design](http://ami.responsivedesign.is/) - used to do responsive mockups,
 - [LucidChart](https://www.lucidchart.com/) - used to create flow chart diagram,
 - [Heroku](https://id.heroku.com/) - online app used to deploy project,
-- [CI-Python-Linter](https://pep8ci.herokuapp.com/) - PEP8 Python Validator.
+- [CI-Python-Linter](https://pep8ci.herokuapp.com/) - PEP8 Python Validator,
+- [Grammarly](https://www.grammarly.com/) - used to help with grammar check.
 
 ## Resources:
 
 - [Code Institute Course Content](https://learn.codeinstitute.net/dashboard) - Main source of fundamental knowledge,
 - [Code Institute SLACK Community](https://slack.com/) - Source of assistance,
+- [Code Institute Python Essential Template](https://github.com/Code-Institute-Org/python-essentials-template) - CI student template for deploying PP3 project,
 - [Wikipedia](https://pl.wikipedia.org/) - Source of history information and images,
 - [Grammarly](https://app.grammarly.com/) - help with grammar and typo check,
 - [GitHub Community](https://github.com/) - Source of information, solutions and suggestions,
