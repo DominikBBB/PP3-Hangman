@@ -249,10 +249,10 @@ Topography in the terminal is very limited. To make the terminal messages more i
     <p>&nbsp;</p>
 
 6. Exit Game
-    - Good bye and good luck message
+    - Goodbye and Good Luck message
     <p>&nbsp;</p>
 
-    <details><summary>End of the Game Screenshot 2</summary>
+    <details><summary>Exit Game Screenshot</summary>
 
     ![EG](assets/testing/manual/MT-11.png)
 
